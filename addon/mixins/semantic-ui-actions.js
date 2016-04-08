@@ -3,14 +3,14 @@ import Ember from 'ember';
 export default Ember.Mixin.create({
   notifyParent: Ember.on('willInsertElement', function() {
     if (this.get('parent') &&
-       this.get('parent')._actions &&
-       this.get('parent')._actions['register_child']) {
+       this.get('parent').actions &&
+       this.get('parent').actions['register_child']) {
       this.get('parent').send('register_child', this);
     }
   }),
 
   onShow: function() {
-    if (this._actions && this._actions['show']) {
+    if (this.actions && this.actions['show']) {
       this.send('show', this);
       return false;
     } else {
@@ -19,7 +19,7 @@ export default Ember.Mixin.create({
   },
 
   onApprove: function() {
-    if (this._actions && this._actions['approve']) {
+    if (this.actions && this.actions['approve']) {
       this.send('approve', this);
       return false;
     } else {
@@ -28,7 +28,7 @@ export default Ember.Mixin.create({
   },
 
   onDeny: function() {
-    if (this._actions && this._actions['deny']) {
+    if (this.actions && this.actions['deny']) {
       this.send('deny', this);
       return false;
     } else {
@@ -37,7 +37,7 @@ export default Ember.Mixin.create({
   },
 
   onHide: function() {
-    if (this._actions && this._actions['hide']) {
+    if (this.actions && this.actions['hide']) {
       this.send('hide', this);
       return true; // Keeping the semantics the same here, we can't stop a hide
     } else {
