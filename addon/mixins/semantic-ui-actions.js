@@ -45,7 +45,7 @@ export default Ember.Mixin.create({
 
   hasAction(scope, action) {
     scope = scope || {};
-    let actions = scope.actions || scope._actions;
+    let actions = scope.actions || scope._actions || {};
     return !!actions[action];
   }
 });

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SemanticUiDefaultsMixin from '../../../mixins/semantic-ui-defaults';
+import SemanticUiDefaultsMixin from 'semantic-ui-ember-modal/mixins/semantic-ui-defaults';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | semantic ui defaults');

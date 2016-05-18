@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ComponentMixin from '../../../mixins/component';
+import ComponentMixin from 'semantic-ui-ember-modal/mixins/component';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | component');

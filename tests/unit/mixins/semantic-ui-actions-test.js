@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SemanticUiActionsMixin from '../../../mixins/semantic-ui-actions';
+import SemanticUiActionsMixin from 'semantic-ui-ember-modal/mixins/semantic-ui-actions';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | semantic ui actions');
