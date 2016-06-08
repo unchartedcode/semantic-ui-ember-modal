@@ -8,6 +8,16 @@ export default Ember.Mixin.create({
     }
   },
 
+  didInsertElement() {
+    this._super(...arguments);
+    this.execute('show');
+  },
+
+  onHidden() {
+    this._super(...arguments);
+    this.sendAction('close_modal', this.get('modalId'));
+  },
+
   // Remove, deprecated
   onApprove: function() {
     if (this.hasAction(this, 'approve')) {
