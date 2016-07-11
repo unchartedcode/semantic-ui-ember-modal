@@ -19,7 +19,7 @@ export default Ember.Mixin.create({
   },
 
   // Remove, deprecated
-  onApprove: function() {
+  onApprove() {
     if (this.hasAction(this, 'approve')) {
       this.send('approve', this);
       return false;
@@ -29,7 +29,7 @@ export default Ember.Mixin.create({
   },
 
   // Remove, deprecated
-  onDeny: function() {
+  onDeny() {
     if (this.hasAction(this, 'deny')) {
       this.send('deny', this);
       return false;
@@ -39,7 +39,7 @@ export default Ember.Mixin.create({
   },
 
   // Remove, deprecated
-  onHide: function() {
+  onHide() {
     if (this.hasAction(this, 'hide')) {
       this.send('hide', this);
       return true; // Keeping the semantics the same here, we can't stop a hide
