@@ -11,7 +11,9 @@ export default Ember.Mixin.create({
     this.setDefault(settings, 'autofocus');
     this.setDefault(settings, 'allowMultiple');
     this.setDefault(settings, 'closable');
-    this.setDefault(settings, 'context');
+    // You'll have to manually add to willInitSemantic if you want this
+    // Since ember has a context object, it screws with the modal
+    // this.setDefault(settings, 'context');
     this.setDefault(settings, 'dimmerSettings');
     this.setDefault(settings, 'duration');
     this.setDefault(settings, 'offset');
@@ -29,8 +31,8 @@ export default Ember.Mixin.create({
 
   setDefault(settings, property, defaultSetting) {
     if (settings[property] == null) {
-      if (this.get('property') != null) {
-        settings[property] = this.get('property');
+      if (this.get(property) != null) {
+        settings[property] = this.get(property);
       } else if (defaultSetting != null) {
         settings[property] = defaultSetting;
       }
