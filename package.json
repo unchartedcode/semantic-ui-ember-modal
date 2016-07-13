@@ -38,7 +38,7 @@
     "ember-resolver": "^2.0.3",
     "ember-try": "^0.2.2",
     "loader.js": "^4.0.1",
-    "semantic-ui-ember": "1.0"
+    "semantic-ui-ember": "git://github.com/Semantic-Org/Semantic-UI-Ember.git#ccdb8fd0080f44015d6137206ef1cbca17cdfb60"
   },
   "keywords": [
     "ember-addon"

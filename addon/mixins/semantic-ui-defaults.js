@@ -17,7 +17,7 @@ export default Ember.Mixin.create({
     this.setDefault(settings, 'dimmerSettings');
     this.setDefault(settings, 'duration');
     this.setDefault(settings, 'offset');
-    this.setDefault(settings, 'queue')
+    this.setDefault(settings, 'queue');
     this.setDefault(settings, 'transition');
 
     // check for methods
