@@ -8,6 +8,9 @@ export default Ember.Mixin.create({
       let controller = this.controllerFor('application');
 
       // Wire up the close event
+      if (args.length === 0) {
+        args.push({});
+      }
       args[0].modalId = Ember.guidFor(name);
       args[0].close_modal = function(modalId) {
         if (controller.get('isDestroyed') || controller.get('isDestroying')) { return; }
