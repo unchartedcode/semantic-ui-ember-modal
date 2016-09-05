@@ -7,6 +7,7 @@ import ComponentMixin from 'semantic-ui-ember-modal/mixins/component';
 export function initialize(/* application */) {
   UiModal.reopen(SemanticUiDefaultsMixin, SemanticUiActionsMixin);
   Ember.Component.reopen(ComponentMixin);
+  Ember.Controller.reopen(ComponentMixin);
 }
 
 export default {
