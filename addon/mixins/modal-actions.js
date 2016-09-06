@@ -11,6 +11,9 @@ export default Ember.Mixin.create({
       if (args.length === 0) {
         args.push({});
       }
+      if (args[0] === null) {
+        args[0] = {};
+      }
       args[0].modalId = Ember.guidFor(name);
       args[0].close_modal = function(modalId) {
         if (controller.get('isDestroyed') || controller.get('isDestroying')) { return; }
