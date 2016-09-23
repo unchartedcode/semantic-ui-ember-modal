@@ -4,7 +4,7 @@ export default Ember.Mixin.create({
   init() {
     this._super(...arguments);
     if (this.hasAction(this.get('parent'), 'register_child')) {
-      this.get('parent').send('register_child', this);
+      this.get('parent.register_child')(this);
     }
   },
 
@@ -15,7 +15,7 @@ export default Ember.Mixin.create({
 
   onHidden() {
     this._super(...arguments);
-    this.sendAction('close_modal', this.get('modalId'));
+    this.get('close_modal', this.get('modalId'));
   },
 
   // Remove, deprecated
@@ -49,8 +49,8 @@ export default Ember.Mixin.create({
   },
 
   willDestroyElement() {
-    this._super(...arguments);
     this.execute('hide');
+    this._super(...arguments);
   },
 
   hasAction(scope, action) {
