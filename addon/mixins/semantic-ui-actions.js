@@ -15,7 +15,10 @@ export default Ember.Mixin.create({
 
   onHidden() {
     this._super(...arguments);
-    this.get('close_modal', this.get('modalId'));
+    let closeModal = this.get('close_modal');
+    if (typeof closeModal === "function") {
+      closeModal();
+    }
   },
 
   // Remove, deprecated
