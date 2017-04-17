@@ -15,6 +15,7 @@ module('Unit | Initializer | modal', {
 
 // Replace this with your real tests.
 test('it works', function(assert) {
+  assert.expect(1);
   ModalInitializer.initialize(application);
 
   // you would normally confirm the results of the initializer here

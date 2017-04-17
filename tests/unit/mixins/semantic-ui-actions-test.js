@@ -6,6 +6,7 @@ module('Unit | Mixin | semantic ui actions');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
+  assert.expect(1);
   let SemanticUiActionsObject = Ember.Object.extend(SemanticUiActionsMixin);
   let subject = SemanticUiActionsObject.create();
   assert.ok(subject);
